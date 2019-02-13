@@ -1,6 +1,6 @@
 ---
 label: Blog Post Template
-hide_body: true
+hide_body: false
 is_partial: false
 fields:
 - name: layout
