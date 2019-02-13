@@ -1,6 +1,6 @@
 ---
 label: Blog Post Template
-hide_body: false
+hide_body: true
 is_partial: false
 fields:
 - name: layout
@@ -24,5 +24,6 @@ fields:
   default:
   - Blog
   - Post
+- type: textarea
 pages:
 - _posts/2019-02-13-hello.md
