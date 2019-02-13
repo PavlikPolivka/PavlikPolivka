@@ -1,15 +1,26 @@
 ---
-label: Blog Post
+label: Blog Post Template
 hide_body: false
 is_partial: false
 fields:
-- type: textarea
-  name: text
-  label: Text
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: post
   config:
     required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-pages:
-- _posts/2019-02-13-hello.md
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+  config:
+    required: true
+- name: tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default:
+  - Blog
+  - Post
