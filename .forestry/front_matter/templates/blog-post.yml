@@ -24,3 +24,5 @@ fields:
   default:
   - Blog
   - Post
+pages:
+- _posts/hello.md
