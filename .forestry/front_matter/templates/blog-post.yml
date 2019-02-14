@@ -32,5 +32,4 @@ fields:
     required: true
   default: blog
 pages:
-- _posts/2019-02-13-hello.md
 - _posts/2019-02-13-test.md
