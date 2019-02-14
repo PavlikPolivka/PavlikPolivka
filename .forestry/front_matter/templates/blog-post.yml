@@ -31,3 +31,5 @@ fields:
   config:
     required: true
   default: blog
+pages:
+- _posts/blog-post-test.md
