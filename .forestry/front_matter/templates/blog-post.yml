@@ -32,4 +32,4 @@ fields:
     required: true
   default: blog
 pages:
-- _posts/blog-post-test.md
+- _posts/2019-02-14-blog-post-test.md
