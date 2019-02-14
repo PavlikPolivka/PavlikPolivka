@@ -1,12 +1,12 @@
 ---
-label: Blog Post Template
+label: Blog Post
 hide_body: false
 is_partial: false
 fields:
 - name: layout
   label: Layout
   type: text
-  hidden: true
+  hidden: false
   default: post
   config:
     required: true
@@ -27,7 +27,7 @@ fields:
 - type: textarea
   label: categories
   name: categories
-  hidden: true
+  hidden: false
   config:
     required: true
   default: blog
