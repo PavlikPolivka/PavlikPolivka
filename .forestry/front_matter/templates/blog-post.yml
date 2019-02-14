@@ -31,5 +31,3 @@ fields:
   config:
     required: true
   default: blog
-pages:
-- _posts/2019-02-13-test.md
