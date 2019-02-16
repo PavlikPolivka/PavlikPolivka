@@ -20,11 +20,11 @@ description: Personal blog and resume
 avatar: profile.png
 email: polivka.pavel@gmail.com
 github: PavlikPolivka # username
-twitter: username
-linkedin: username
-stackoverflow: username   #e.g: users/2735833/proton1h1
+facebook: pavel.polivka
+linkedin: pavel-polívka-863a1356
+#stackoverflow: username   #e.g: users/2735833/proton1h1
 #Comment out if you don't want disqus
-disqus: username
+#disqus: username
 google_analytics: UA-64345822-1
 
 
