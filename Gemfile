@@ -1,9 +1,4 @@
-source "https://rubygems.org"
-
-gem "jekyll", "~> 3.6.2"
-gem "github-pages", "~> 168"
-
-group :jekyll_plugins do
-  gem "jekyll-paginate-v2", "~> 1.7"
-  gem "jekyll-feed"
-end
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+gem "jekyll-github-metadata"
+gem "jekyll-octicons"

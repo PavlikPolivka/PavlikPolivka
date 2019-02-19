@@ -1,63 +1,156 @@
+# Get started building your personal website
 
-# Sustain
+### Showcase your software development skills
 
-[![Build Status](https://secure.travis-ci.org/jekyller/sustain.png?branch=gh-pages)](http://travis-ci.org/jekyller/sustain)
-[![Ruby](https://img.shields.io/badge/ruby-2.4.2-blue.svg?style=flat)](http://travis-ci.org/jekyller/sustain)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.6.2-blue.svg?style=flat)](http://travis-ci.org/jekyller/sustain)
+This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories.
 
-Personal blog built with [Bootstrap](http://getbootstrap.com/), powered by [Jekyll](http://jekyllrb.com/) and freely
-hosted in [Github pages](https://pages.github.com/).
+Your personal website is waiting to be personalized, though. It includes space to highlight your specific areas of interest in software development, like languages or industries. And it's standing by to publish your next great blog post.
+
+It's all possible using the combination of [Jekyll](https://jekyllrb.com/docs/) (for building your website), [GitHub Pages](https://pages.github.com/) (for hosting your website), and [GitHub's API](https://developer.github.com/v3/) (for automatically populating your website with content).
+
+## Installation
+
+### Fork the `github/personal-website` repo
+
+You'll be making your own copy of the "personal website starter" repository so you have your own project to customize. A "fork" is a copy of a repository. So select "Fork" atop [the `github/personal-website` repository](https://github.com/github/personal-website).
+
+Once you've found a home for your forked repository, it's yours. You're the owner, so you're ready to publish, if you wish.
+
+### Install in your local development environment
+
+If you want to manage your website in a local web development environment, you'll be using [Ruby](https://jekyllrb.com/docs/installation/).
+
+Once you've found a home for your forked repository, **[clone it](https://help.github.com/articles/cloning-a-repository/)**.
+
+#### Install Jekyll
+
+Jekyll is a [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems) that can be installed on most systems.
+
+1. Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/)
+2. Install Jekyll and [bundler](/docs/ruby-101/#bundler) [gems](/docs/ruby-101/#gems)
+```
+gem install jekyll bundler
+```
+3. Change into your new directory
+```
+cd personal-website
+```
+4. Build the site and make it available on a local server
+```
+bundle exec jekyll serve
+```
+5. Now browse to [http://localhost:4000](http://localhost:4000)
+
+### Publish
+
+When you host your personal website's code on GitHub, you get the support of free hosting through GitHub Pages.
+
+**The fastest approach** is to rename your repository `username.github.io`, where `username` is your GitHub username (or organization name). Then, the next time you push any changes to your repository's `master` branch, they'll be accessible on the web at your `username.github.io` address.
+
+**If you want to use a custom domain**, however, you'll want to add it to your repository's "Custom domain" settings on github.com. And then register and/or [configure your domain with a DNS provider](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
+
+## Customization
+
+It's your website, and you control the source code. So you can custom everything, if you like. But we've provided a handful of quick customizations for you to consider as you get your website off the ground.
+
+### Quick configuration changes
+
+Most customizations can be done in a matter of seconds, by revising your repository's `_config.yml` file. Just remember to restart your local server each time you save new changes so your Jekyll-powered website rebuilds correctly:
+
+1. Shut down your server by entering the keyboard command <kbd>CTRL</kbd>+<kbd>c</kbd>
+2. Restart your server: `jekyll serve`
 
 
-## View the live demo
+#### Layout
 
-[Sustain Live Demo](https://jekyller.github.io/sustain)
+By default, your website will display in a two-column layout on larger-screen devices, with your photo, name, and basic information displayed in a left-aligned "sidebar." But you can quickly switch to a "stacked" single-column layout by changing the line in your `_config.yml` file that reads `layout: sidebar` to `layout: stacked`.
 
+#### Style
 
-## Screenshots
+By default, your website appears with a "light" white and gray background, with dark text. But you can quickly switch to a "dark" background with white text by changing the line in your `_config.yml` file that reads `style: light` to `style: dark`.
 
-**Home page**
-![home page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen1.png)
+#### Topics
 
-**Blog page**
-![blog page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen2.png)
+Your website comes pre-configured with three topics (e.g. "Web design" and "Sass") that appear in a section titled "My Interests." These are also stored in your repository's `_config.yml` file, where you can define each topic's name and two other optional details:
 
-**Post page**
-![post page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen3.png)
+- `web_url`: The web address you'd like to your topic to link to (e.g. `https://github.com/topics/sass`).
+- `image_url`: The web address of an (ideally square) image that you'd like to appear with your topic.
 
-**Projects page**
-![project page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen4.png)
+## Adding pages
 
+To **add a page** to your website (e.g. detailed resume):
 
-## How to use it
+1. Create a new `.html` or `.md` file at the root of your repository.
+2. Give it a filename that you want to be used in the page's URL (e.g. `http://yoursite.dev/filename`).
+3. At the start of your file, include the following [front matter](https://jekyllrb.com/docs/front-matter/):
 
-Simply clone/fork this repository, and then run `jekyll serve` inside the directory.
-Edit the site attributes in *_config.yml* and edit the various entries in *_includes/* and *_posts/*.
+```
+---
+layout: default
+---
+```
 
+4. Save.
 
-## Issues and contributing
+## Adding blog posts
 
-I have tested this install with Ruby v2.4.2 (Mac OS RVM) and Jekyll v3.6.2. If you run into any problems please log them on the [issue tracker](https://github.com/jekyller/sustain/issues).
+To **add a blog post** to your website:
 
-Feel free pull-request your patches and fixes.
+1. Create a new `.md` file in your repository's `/_posts/` directory.
+2. Give it a filename using the following format:
 
-#### Contributors
+```
+YEAR-MONTH-DAY-title.MARKUP
+```
 
-[Sumit Murari](https://github.com/murarisumit), November 2015
+3. At the start of your file, include the following [front matter](https://jekyllrb.com/docs/front-matter/):
 
+```
+---
+title: "The title of my blog post"
+---
+```
 
-## Thanks
+Your website comes with a placeholder blog post that you can reference. Notably, its [front matter](https://jekyllrb.com/docs/front-matter/) declares `published` as `false`, so that it won't appear on your website.
 
-Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
+While you _can_ also define a `layout` in the front matter, your website is pre-configured to assign the `post` layout to all of the posts in your `/_posts/` directory. So you don't have to declare that in your posts, if you don't want to.
 
+Jekyll's conventions for authoring and managing blog posts is very flexible. You can [learn more in Jekyll's documentation for "Posts."](https://jekyllrb.com/docs/posts/)
 
-## Copyright & License
+## Content and templates
 
-Copyright (C) 2015-2017 - Released under the MIT License.
+To give you a sound foundation to start your personal website, your repository includes a handful of "includes" -- dynamic `.html` files that are re-used throughout your website. They're all stored in the `/_includes/` directory.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+There are the usual suspects, like `header.html` and `footer.html`. But there are few more worth pointing out:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+- `interests.html`: A heading and dynamic list of "My Interests," which is populated with the [topics](#topics) you list in your `_config.yml`.
+- `masthead.html`: A collection of your avatar, name, bio, and other metadata that's displayed prominently on all your webpages to help identify what the website is about.
+- `post-card.html`: A compact, summarized presentation of a blog post, re-used to display a listing of your latest blog posts.
+- `projects.html`: A heading and dynamic list of "My Projects," which is populated with a listing of your newest GitHub repositories.
+- `repo-card.html`: A compact, summarized presentation of a repository, re-used to display a listing of your GitHub repositories.
+- `thoughts.html`: A heading and dynamic list of "My Thoughts," which is populated with a listing of your latest blog posts.
+- `topic-card.html`: A compact, summarized presentation of a topic (defined in your `_config.yml`), re-used to display a listing of your interests.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+### Layouts
+
+Your repository comes with three layouts:
+
+- **default**: Not used by any of the built-in pages or posts, but useful for any new pages you create.
+- **home**: Used by your `index.html` homepage to display listings of your projects, interests, and (optionally) your blog posts.
+- **post**: Used by default by the posts in your `/_posts/` directory.
+
+Jekyll's convention for defining layouts is very flexible. You can [learn more about customizing your layouts in the Jekyll "Layouts" docs.](https://jekyllrb.com/docs/layouts/)
+
+## Styles
+
+Your website is pre-configured to use [a very flexible CSS framework called "Primer,"](https://styleguide.github.com/primer/) alongside any custom styles you write in your `/assets/styles.scss` Sass stylesheet. It's currently referenced within your `styles.scss` file, using the CSS import at-rule:
+
+```
+@import url('https://unpkg.com/primer/build/build.css');
+```
+
+You are, of course, welcome to remove it or replace it with another framework. Just bear in mind that the HTML that your website came pre-packaged with references multiple Primer "utility classes" to define things like column widths, margins, and background colors.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
