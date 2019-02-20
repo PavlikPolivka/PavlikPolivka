@@ -16,12 +16,11 @@ defaults:
       layout: "post"
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  - name: Java
+    image_url: https://upload.wikimedia.org/wikipedia/de/e/e1/Java-Logo.svg
 
-  - name: Web design
+  - name: Writing
 
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  - name: Solr
+    web_url: hhttp://lucene.apache.org/solr/
+    image_url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Solr.png/130px-Solr.png
