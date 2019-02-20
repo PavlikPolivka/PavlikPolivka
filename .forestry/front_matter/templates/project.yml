@@ -20,5 +20,3 @@ fields:
 - type: text
   name: title
   label: title
-pages:
-- _posts/2019-02-14-project-1.md
