@@ -14,13 +14,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
-topics:
-  - name: Java
-    image_url: https://upload.wikimedia.org/wikipedia/de/e/e1/Java-Logo.svg
-
-  - name: Writing
-
-  - name: Solr
-    web_url: hhttp://lucene.apache.org/solr/
-    image_url: https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Solr.png/130px-Solr.png
